@@ -14,18 +14,17 @@ npm run build:drafts   # production build with drafts showing, for checking
 ## Writing in Obsidian
 
 1. Open the `content/` folder as a vault (Open folder as vault → `content`). Not the repo root.
-2. Settings → Community plugins → turn them on → Browse → install and enable **Templater**. Its settings are already in the repo.
-3. To add something: **Alt+N** ("Templater: Create new note from template"), pick a template, answer the prompts. The note gets named, moved to the right folder and filled with the right properties.
-   - Or right-click a folder (e.g. `people/`) → New note. Its template applies by itself.
+2. Settings → Core plugins → turn on **Templates**. Its template folder is already set to `templates/`.
+3. To add something: right-click the folder it belongs in (e.g. `people/`) → **New note** → type its name → run **Templates: Insert template** from the command palette (Ctrl/Cmd+P) and pick the matching template. Tip: give that command a hotkey in Settings → Hotkeys.
 4. Fill it in, then flip `draft: false` when it's ready. Commit and push.
 
-| Template      | Goes in     | Asks for                              |
+| Template      | Goes in     | Note name                             |
 | ------------- | ----------- | ------------------------------------- |
-| Mentee        | `people/`   | a name (see consent below), the role you mentored them in |
-| Role          | `work/`     | role name, company                    |
+| Mentee        | `people/`   | a label until they agree to be named (see below) |
+| Role          | `work/`     | the role, e.g. "Product Owner, AVMS"  |
 | Side project  | `projects/` | project name                          |
 | Hobby         | `hobbies/`  | hobby                                 |
-| Post          | `posts/`    | title                                 |
+| Post          | `posts/`    | post title                            |
 
 Link notes with `[[wikilinks]]`, the same way you would in Obsidian. A link to a note that doesn't exist yet is fine: it shows as plain text until you write it. Paste images and they land in `attachments/`.
 
@@ -34,7 +33,7 @@ Link notes with `[[wikilinks]]`, the same way you would in Obsidian. A link to a
 - **`draft: true` never publishes.** Every template starts as a draft.
 - **Mentees need `consent: true` too.** Without it they're left off the site, the graph, and links.
 - **The repo is public**, so drafts and unpublished mentees can still be read on GitHub. Don't put someone's real name in a note until they've said yes.
-- **URLs come from `slug`**, which the templates set once. Renaming a note in Obsidian won't break its URL.
+- **URLs come from the note name**, e.g. `people/Jane Doe.md` → `/people/jane-doe/`. To rename a published note without breaking its URL, first add `slug: jane-doe` (the current URL name) to its properties.
 
 ## Layout
 
@@ -43,7 +42,7 @@ content/              Obsidian vault (and the site's content)
   README.md           home page intro
   <folder>/README.md  intro shown under each folder's listing
   work/ people/ projects/ hobbies/ posts/
-  templates/          Templater templates (not published)
+  templates/          Obsidian templates (not published)
   attachments/        images and other files, served from the site root
 src/
   content.config.ts   frontmatter schemas for each folder

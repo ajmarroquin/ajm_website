@@ -50,7 +50,7 @@ export const collections = {
     loader: folder('work'),
     schema: z.object({
       ...base,
-      org: z.string(),
+      org: opt(z.string()),
       start: when,
       end: opt(when),
     }),
