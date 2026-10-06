@@ -1,0 +1,63 @@
+---
+import Shell from '../../layouts/Shell.astro';
+import Listing from '../../components/Listing.astro';
+import Readme from '../../components/Readme.astro';
+import Graph from '../../components/Graph.astro';
+import { SECTIONS, rows, type SectionKey } from '../../lib/content';
+
+export function getStaticPaths() {
+  return SECTIONS.map((s) => ({ params: { section: s.key }, props: { blurb: s.blurb } }));
+}
+
+const section = Astro.params.section as SectionKey;
+const { blurb } = Astro.props;
+const list = await rows(section);
+const nouns: Record<SectionKey, string> = {
+  work: 'roles',
+  people: 'mentees',
+  projects: 'projects',
+  hobbies: 'hobbies',
+  posts: 'posts',
+};
+const hasGraph = section === 'people';
+---
+
+<Shell title={`${section}/`} description={blurb} path={[section]} status={`${list.length} items`}>
+  <div class="toolbar">
+    <span class="crumbs"><a href="/">~</a><span class="sep">/</span>{section}</span>
+    <span class="spacer"></span>
+    {
+      hasGraph && (
+        <span role="group" aria-label="View as">
+          <button class="btn" type="button" data-view="list" aria-pressed="true">list</button>
+          <button class="btn" type="button" data-view="graph" aria-pressed="false">graph</button>
+        </span>
+      )
+    }
+  </div>
+  <div data-pane="list">
+    <Listing rows={list} noun={nouns[section]} />
+  </div>
+  {hasGraph && <div data-pane="graph" hidden><Graph /></div>}
+  <Readme id={section} label={`${section}/README.md`} />
+</Shell>
+
+{
+  hasGraph && (
+    <script>
+      const buttons = document.querySelectorAll<HTMLButtonElement>('[data-view]');
+      function show(view: string) {
+        buttons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.view === view)));
+        document.querySelectorAll<HTMLElement>('[data-pane]').forEach((p) => (p.hidden = p.dataset.pane !== view));
+        if (view === 'graph') window.dispatchEvent(new Event('graph:show'));
+      }
+      buttons.forEach((b) =>
+        b.addEventListener('click', () => {
+          show(b.dataset.view!);
+          history.replaceState(history.state, '', b.dataset.view === 'graph' ? '#graph' : location.pathname + location.search);
+        }),
+      );
+      if (location.hash === '#graph') show('graph');
+    </script>
+  )
+}

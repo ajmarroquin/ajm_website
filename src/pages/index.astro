@@ -1,0 +1,46 @@
+---
+import Shell from '../layouts/Shell.astro';
+import Readme from '../components/Readme.astro';
+import { SECTIONS, rows } from '../lib/content';
+
+const dirs = await Promise.all(
+  SECTIONS.map(async (s) => {
+    const r = await rows(s.key);
+    const modified = r.map((x) => x.modified).sort().at(-1) ?? '';
+    return { ...s, count: r.length, modified };
+  }),
+);
+---
+
+<Shell title="AJ Marroquin" status={`${dirs.length} folders`}>
+  <div class="toolbar">
+    <span class="crumbs">~</span>
+  </div>
+  <table class="listing">
+    <thead>
+      <tr>
+        <th class="hide-sm" scope="col">mode</th>
+        <th scope="col">name</th>
+        <th scope="col">modified</th>
+        <th class="hide-sm" scope="col">items</th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+        dirs.map((d) => (
+          <tr>
+            <td class="perm hide-sm">drwxr-xr-x</td>
+            <td class="name">
+              <span class="icon" aria-hidden="true">▸</span>
+              <a href={`/${d.key}/`}>{d.key}/</a>
+              <span class="title">{d.blurb}</span>
+            </td>
+            <td class="num">{d.modified}</td>
+            <td class="num hide-sm">{d.count}</td>
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+  <Readme id="root" label="README.md" />
+</Shell>

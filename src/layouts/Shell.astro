@@ -1,0 +1,83 @@
+---
+import '../styles/global.css';
+import { SECTIONS, rows } from '../lib/content';
+
+interface Props {
+  title: string;
+  description?: string;
+  /** Path segments after ~, e.g. ['people', 'jane.md'] */
+  path?: string[];
+  status?: string;
+}
+const { title, description = 'AJ Marroquin: product, people, side projects and ramblings.', path = [], status } = Astro.props;
+const here = Astro.url.pathname;
+const counts = Object.fromEntries(await Promise.all(SECTIONS.map(async (s) => [s.key, (await rows(s.key)).length])));
+const where = ['~', ...path].join('/');
+const pageTitle = path.length ? `${title} · marroqu.in` : title;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="alternate" type="application/rss+xml" title="AJ Marroquin: posts" href="/posts/rss.xml" />
+    <link rel="canonical" href={new URL(here, Astro.site)} />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <div class="frame">
+      <header class="titlebar">
+        <a class="host" href="/">ajm@marroqu.in</a>
+        <span class="where" aria-hidden="true">: {where}</span>
+        <nav aria-label="Elsewhere">
+          <a href="/posts/rss.xml">rss</a>
+          <a href="https://github.com/ajmarroquin">github</a>
+        </nav>
+      </header>
+      <div class="body">
+        <nav class="tree" aria-label="Folders">
+          <h2>Folders</h2>
+          <ul>
+            <li>
+              <a href="/" aria-current={here === '/' ? 'page' : undefined}><span aria-hidden="true">~</span> home</a>
+            </li>
+            {
+              SECTIONS.map((s) => (
+                <li>
+                  <a href={`/${s.key}/`} aria-current={here.startsWith(`/${s.key}/`) ? 'page' : undefined}>
+                    <span aria-hidden="true">▸</span> {s.key}/
+                    <span class="count">{counts[s.key]}</span>
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </nav>
+        <main class="main" id="main">
+          <slot />
+        </main>
+      </div>
+      <footer class="status">
+        <span>{status ?? where}</span>
+        <span class="right">built {new Date().toISOString().slice(0, 10)}</span>
+      </footer>
+    </div>
+
+    <dialog class="panel" id="preview" aria-labelledby="preview-file">
+      <div class="panel-bar">
+        <span class="file" id="preview-file">preview</span>
+        <a class="btn" id="preview-open" href="/">open ↗</a>
+        <button class="btn" id="preview-close" type="button" aria-label="Close preview">✕</button>
+      </div>
+      <div class="panel-body" id="preview-body"></div>
+    </dialog>
+
+    <script>
+      import '../scripts/preview';
+    </script>
+  </body>
+</html>

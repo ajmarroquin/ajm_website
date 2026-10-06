@@ -1,0 +1,170 @@
+---
+// The mentorship web: you in the middle, your roles around you, and the people
+// you mentored hanging off the role you mentored them in. Anything else a
+// mentee note links to (projects, posts) shows up too.
+import { loadVault } from '../lib/content';
+
+const { notes } = loadVault();
+const published = notes.filter((n) => n.published);
+const byKey = new Map(published.map((n) => [n.key, n]));
+const people = published.filter((n) => n.section === 'people');
+
+const ids = new Set<string>();
+const edges: [string, string][] = [];
+const nid = (n: { section: string; id: string }) => `${n.section}/${n.id}`;
+
+for (const w of published.filter((n) => n.section === 'work')) {
+  ids.add(nid(w));
+  edges.push(['me', nid(w)]);
+}
+for (const p of people) {
+  ids.add(nid(p));
+  const targets = p.links.map((k) => byKey.get(k)).filter((t) => t && t !== p);
+  for (const t of targets) {
+    ids.add(nid(t!));
+    edges.push([nid(p), nid(t!)]);
+  }
+  if (!targets.some((t) => t!.section === 'work')) edges.push(['me', nid(p)]);
+}
+
+const data = {
+  nodes: [
+    { id: 'me', label: 'AJ', section: 'me', href: '/' },
+    ...published.filter((n) => ids.has(nid(n))).map((n) => ({ id: nid(n), label: n.title, section: n.section, href: n.href })),
+  ],
+  edges: edges.map(([source, target]) => ({ source, target })),
+};
+const legend = ['work', 'people', 'projects', 'posts'].filter((s) => data.nodes.some((n) => n.section === s));
+---
+
+<figure class="graph" aria-label="Graph of mentees and the roles they were mentored in">
+  <script type="application/json" id="graph-data" set:html={JSON.stringify(data)} />
+  <svg id="graph-svg" role="group"></svg>
+  <figcaption class="legend">
+    {legend.map((s) => <span><i style={`background: var(--c-${s})`} />{s}</span>)}
+  </figcaption>
+</figure>
+
+<script>
+  import { forceSimulation, forceLink, forceManyBody, forceCenter, forceCollide, type SimulationNodeDatum } from 'd3-force';
+  import { openPreview } from '../scripts/preview';
+
+  type N = SimulationNodeDatum & { id: string; label: string; section: string; href: string };
+  type L = { source: N; target: N };
+
+  const SVG = 'http://www.w3.org/2000/svg';
+  const svg = document.querySelector<SVGSVGElement>('#graph-svg')!;
+  const data = JSON.parse(document.querySelector('#graph-data')!.textContent!);
+  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let started = false;
+
+  function el<K extends keyof SVGElementTagNameMap>(tag: K, attrs: Record<string, string | number> = {}) {
+    const e = document.createElementNS(SVG, tag);
+    for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, String(v));
+    return e;
+  }
+
+  function start() {
+    if (started) return;
+    started = true;
+    const { width, height } = svg.getBoundingClientRect();
+    svg.setAttribute('viewBox', `${-width / 2} ${-height / 2} ${width} ${height}`);
+
+    // You stay pinned in the middle; everything else arranges around you.
+    const nodes: N[] = data.nodes.map((n: N) => (n.id === 'me' ? { ...n, fx: 0, fy: 0 } : { ...n }));
+    const links = data.edges as unknown as L[];
+    const degree = new Map<string, number>();
+    for (const e of data.edges) for (const k of [e.source, e.target]) degree.set(k, (degree.get(k) ?? 0) + 1);
+    const radius = (n: N) => (n.id === 'me' ? 14 : 6 + Math.min(6, (degree.get(n.id) ?? 0) * 1.5));
+
+    const edgeLayer = svg.appendChild(el('g'));
+    const nodeLayer = svg.appendChild(el('g'));
+    const lines = links.map(() => edgeLayer.appendChild(el('line', { class: 'edge' })));
+    const groups = nodes.map((n) => {
+      const g = nodeLayer.appendChild(el('g', { class: 'node', tabindex: 0, role: 'link', 'aria-label': `${n.section}: ${n.label}` }));
+      g.appendChild(el('circle', { r: radius(n), fill: `var(--c-${n.section})` }));
+      const t = g.appendChild(el('text', { y: radius(n) + 14, 'text-anchor': 'middle' }));
+      t.textContent = n.label.length > 26 ? n.label.slice(0, 25) + '…' : n.label;
+      g.appendChild(el('title')).textContent = n.label;
+      const open = () => (n.id === 'me' ? (location.href = '/') : openPreview(n.href));
+      g.addEventListener('click', () => !dragged && open());
+      g.addEventListener('keydown', (e) => (e.key === 'Enter' || e.key === ' ') && (e.preventDefault(), open()));
+      // Hovering a node dims everything it isn't connected to.
+      g.addEventListener('pointerenter', () => highlight(n));
+      g.addEventListener('pointerleave', () => highlight(null));
+      g.addEventListener('focus', () => highlight(n));
+      g.addEventListener('blur', () => highlight(null));
+      return g;
+    });
+
+    function highlight(n: N | null) {
+      const near = new Set<N>(n ? [n] : []);
+      if (n) for (const l of links) if (l.source === n || l.target === n) near.add(l.source).add(l.target);
+      groups.forEach((g, i) => g.classList.toggle('dim', Boolean(n) && !near.has(nodes[i])));
+    }
+
+    const sim = forceSimulation(nodes)
+      .force('link', forceLink<N, any>(links).id((d) => d.id).distance(110))
+      .force('charge', forceManyBody().strength(-600))
+      .force('center', forceCenter(0, 0))
+      .force('collide', forceCollide<N>().radius((n) => radius(n) + 24));
+
+    function draw() {
+      // Keep everything inside the box.
+      for (const n of nodes) {
+        n.x = Math.max(-width / 2 + 80, Math.min(width / 2 - 80, n.x!));
+        n.y = Math.max(-height / 2 + 20, Math.min(height / 2 - 50, n.y!));
+      }
+      links.forEach((l, i) => {
+        lines[i].setAttribute('x1', String(l.source.x));
+        lines[i].setAttribute('y1', String(l.source.y));
+        lines[i].setAttribute('x2', String(l.target.x));
+        lines[i].setAttribute('y2', String(l.target.y));
+      });
+      nodes.forEach((n, i) => groups[i].setAttribute('transform', `translate(${n.x},${n.y})`));
+    }
+
+    if (reduceMotion) {
+      sim.stop();
+      sim.tick(300);
+      draw();
+    } else {
+      sim.on('tick', draw);
+    }
+
+    // Drag nodes around, Obsidian-style.
+    let dragging: N | null = null;
+    let dragged = false;
+    const toGraph = (e: PointerEvent) => {
+      const r = svg.getBoundingClientRect();
+      return [e.clientX - r.left - width / 2, e.clientY - r.top - height / 2];
+    };
+    groups.forEach((g, i) =>
+      g.addEventListener('pointerdown', (e) => {
+        dragging = nodes[i];
+        dragged = false;
+        g.setPointerCapture(e.pointerId);
+        if (!reduceMotion) sim.alphaTarget(0.3).restart();
+      }),
+    );
+    svg.addEventListener('pointermove', (e) => {
+      if (!dragging) return;
+      dragged = true;
+      [dragging.fx, dragging.fy] = toGraph(e);
+      if (reduceMotion) {
+        [dragging.x, dragging.y] = [dragging.fx!, dragging.fy!];
+        draw();
+      }
+    });
+    svg.addEventListener('pointerup', () => {
+      if (!dragging) return;
+      if (dragging.id !== 'me') dragging.fx = dragging.fy = null;
+      dragging = null;
+      sim.alphaTarget(0);
+    });
+  }
+
+  // The graph starts hidden behind the "graph" toggle; lay it out once it has a size.
+  window.addEventListener('graph:show', () => requestAnimationFrame(start));
+  if (svg.getBoundingClientRect().width > 0) start();
+</script>

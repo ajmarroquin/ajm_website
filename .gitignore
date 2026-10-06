@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.astro/
+.DS_Store
+
+# Obsidian: keep shared vault settings, drop per-machine state and plugin code
+content/.obsidian/workspace*.json
+content/.obsidian/cache
+content/.obsidian/plugins/*/*
+!content/.obsidian/plugins/*/data.json
+content/.trash/

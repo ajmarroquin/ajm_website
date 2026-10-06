@@ -1,0 +1,49 @@
+---
+import { humanSize, type Row } from '../lib/content';
+
+interface Props {
+  rows: Row[];
+  /** Plural noun for the empty state, e.g. "mentees". */
+  noun?: string;
+}
+const { rows, noun = 'files' } = Astro.props;
+---
+
+{
+  rows.length === 0 ? (
+    <p class="empty">No {noun} published yet.</p>
+  ) : (
+    <table class="listing">
+      <thead>
+        <tr>
+          <th class="hide-sm" scope="col">mode</th>
+          <th scope="col">name</th>
+          <th scope="col">modified</th>
+          <th class="hide-sm" scope="col">size</th>
+          <th scope="col">
+            <span class="skip">actions</span>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {rows.map((r) => (
+          <tr>
+            <td class="perm hide-sm">-rw-r--r--</td>
+            <td class="name">
+              <a href={r.href}>{r.file}</a>
+              {r.hidden && <span class="badge">{r.hidden}</span>}
+              {r.title !== r.file.replace(/\.md$/, '') && <span class="title">{r.title}</span>}
+            </td>
+            <td class="num">{r.modified}</td>
+            <td class="num hide-sm">{humanSize(r.size)}</td>
+            <td>
+              <a class="btn" href={r.href} data-preview aria-label={`Preview ${r.title}`}>
+                view
+              </a>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  )
+}

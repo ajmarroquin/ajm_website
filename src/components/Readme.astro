@@ -1,0 +1,23 @@
+---
+import { render } from 'astro:content';
+import { readme } from '../lib/content';
+
+interface Props {
+  id: string;
+  label: string;
+}
+const { id, label } = Astro.props;
+const entry = await readme(id);
+const { Content } = entry ? await render(entry) : { Content: null };
+---
+
+{
+  Content && (
+    <section class="readme" aria-label={label}>
+      <header>{label}</header>
+      <div class="prose">
+        <Content />
+      </div>
+    </section>
+  )
+}

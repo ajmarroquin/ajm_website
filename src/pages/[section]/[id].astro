@@ -1,0 +1,61 @@
+---
+import { render } from 'astro:content';
+import Shell from '../../layouts/Shell.astro';
+import Properties from '../../components/Properties.astro';
+import { SECTIONS, rows, loadVault, type Row } from '../../lib/content';
+
+export async function getStaticPaths() {
+  const all = await Promise.all(SECTIONS.map((s) => rows(s.key)));
+  return all.flat().map((row) => ({
+    params: { section: row.entry.collection, id: row.entry.id },
+    props: { row },
+  }));
+}
+
+const { row } = Astro.props as { row: Row };
+const { entry } = row;
+const { Content } = await render(entry);
+const section = entry.collection;
+
+// Obsidian-style backlinks: published notes that link here.
+const self = loadVault().notes.find((n) => n.section === section && n.id === entry.id);
+const backlinks = self ? loadVault().notes.filter((n) => n.published && n !== self && n.links.includes(self.key)) : [];
+---
+
+<Shell
+  title={row.title}
+  description={entry.data.summary ?? undefined}
+  path={[section, row.file]}
+  status={`${row.file} · ${row.modified}`}
+>
+  <div class="toolbar">
+    <span class="crumbs">
+      <a href="/">~</a><span class="sep">/</span><a href={`/${section}/`}>{section}</a><span class="sep">/</span>{row.file}
+    </span>
+    {row.hidden && <span class="badge">{row.hidden}: only visible in dev</span>}
+  </div>
+  <article class="doc" data-doc data-file={`${section}/${row.file}`}>
+    <h1 class="doc-title">{row.title}</h1>
+    {entry.data.summary && <p class="summary">{entry.data.summary}</p>}
+    <Properties entry={entry} />
+    <div class="prose">
+      <Content />
+    </div>
+    {
+      backlinks.length > 0 && (
+        <aside class="backlinks">
+          <h2>Linked from</h2>
+          <ul>
+            {backlinks.map((n) => (
+              <li>
+                <a href={n.href} data-preview>
+                  {n.section}/{n.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </aside>
+      )
+    }
+  </article>
+</Shell>

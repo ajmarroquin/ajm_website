@@ -1,0 +1,37 @@
+---
+import type { Entry } from '../lib/content';
+import NoteLink from './NoteLink.astro';
+
+const { entry } = Astro.props as { entry: Entry };
+const d = entry.data as Record<string, any>;
+const s = entry.collection;
+const fmtDate = (v: Date) => v.toISOString().slice(0, 10);
+const isLink = (v: unknown) => typeof v === 'string' && /^\[\[.*\]\]$/.test(v.trim());
+---
+
+<dl class="props">
+  {s === 'work' && d.org && (<div><dt>org</dt><dd>{d.org}</dd></div>)}
+  {s === 'work' && (<div><dt>when</dt><dd>{d.start} → {d.end ?? 'present'}</dd></div>)}
+
+  {s === 'people' && (d.role_then || d.role_now) && (
+    <div><dt>role</dt><dd>{d.role_then ?? '?'} → {d.role_now ?? '?'}</dd></div>
+  )}
+  {s === 'people' && d.mentored_during && (<div><dt>mentored during</dt><dd><NoteLink to={d.mentored_during} /></dd></div>)}
+  {s === 'people' && d.how && (<div><dt>how</dt><dd>{d.how}</dd></div>)}
+  {s === 'people' && d.outcomes?.length > 0 && (
+    <div><dt>outcomes</dt><dd><ul>{d.outcomes.map((o: string) => <li>{o}</li>)}</ul></dd></div>
+  )}
+  {s === 'people' && d.links?.length > 0 && (
+    <div><dt>related</dt><dd><ul>{d.links.map((l: string) => <li>{isLink(l) ? <NoteLink to={l} /> : l}</li>)}</ul></dd></div>
+  )}
+
+  {s === 'projects' && (<div><dt>status</dt><dd>{d.status}</dd></div>)}
+  {s === 'projects' && d.started && (<div><dt>started</dt><dd>{d.started}</dd></div>)}
+  {s === 'projects' && d.url && (<div><dt>url</dt><dd><a href={d.url}>{d.url}</a></dd></div>)}
+  {s === 'projects' && d.repo && (<div><dt>repo</dt><dd><a href={d.repo}>{d.repo}</a></dd></div>)}
+
+  {s === 'hobbies' && d.since && (<div><dt>since</dt><dd>{d.since}</dd></div>)}
+  {s === 'posts' && (<div><dt>date</dt><dd>{fmtDate(d.date)}</dd></div>)}
+
+  {d.tags?.length > 0 && (<div><dt>tags</dt><dd>{d.tags.map((t: string) => <span class="tag">{t}</span>)}</dd></div>)}
+</dl>

@@ -1,0 +1,11 @@
+---
+// Renders a frontmatter value like "[[Some Note]]" as a link if that note is
+// published, or as plain text if it isn't (yet).
+import { resolve } from '../lib/content';
+import { stripLink } from '../lib/vault.mjs';
+
+const { to } = Astro.props as { to: string };
+const note = resolve(to);
+---
+
+{note ? <a class="wikilink" href={note.href} data-preview>{note.title}</a> : <span>{stripLink(to)}</span>}
