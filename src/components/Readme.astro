@@ -1,4 +1,8 @@
 ---
+// A folder's README, shown above its listing as a collapsible panel.
+// Built on <details>, so it opens and closes without JavaScript. With JS,
+// there's also a close button at the bottom, and a closed README stays
+// closed for that visitor (per folder, in their browser only).
 import { render } from 'astro:content';
 import { readme } from '../lib/content';
 
@@ -9,15 +13,54 @@ interface Props {
 const { id, label } = Astro.props;
 const entry = await readme(id);
 const { Content } = entry ? await render(entry) : { Content: null };
+const key = `readme-closed:${id}`;
 ---
 
 {
   Content && (
-    <section class="readme" aria-label={label}>
-      <header>{label}</header>
+    <details class="readme" open data-readme-key={key}>
+      <summary>
+        <span>{label}</span>
+        <span class="readme-toggle" aria-hidden="true">
+          <span class="when-open">✕</span>
+          <span class="when-closed">▸ show</span>
+        </span>
+      </summary>
       <div class="prose">
         <Content />
       </div>
-    </section>
+      <div class="readme-foot" hidden>
+        <button class="btn readme-close" type="button">close README</button>
+      </div>
+    </details>
   )
 }
+
+<script is:inline define:vars={{ key }}>
+  // Runs right away so a closed README doesn't flash open on load.
+  try {
+    if (localStorage.getItem(key) === '1') {
+      document.querySelector(`[data-readme-key="${key}"]`)?.removeAttribute('open');
+    }
+  } catch {}
+</script>
+
+<script>
+  document.querySelectorAll<HTMLDetailsElement>('details.readme').forEach((d) => {
+    const key = d.dataset.readmeKey!;
+    const foot = d.querySelector<HTMLElement>('.readme-foot')!;
+    foot.hidden = false;
+    foot.querySelector('button')!.addEventListener('click', () => {
+      d.open = false;
+      const top = d.getBoundingClientRect().top;
+      if (top < 0) d.scrollIntoView({ block: 'start' });
+      d.querySelector('summary')!.focus();
+    });
+    d.addEventListener('toggle', () => {
+      try {
+        if (d.open) localStorage.removeItem(key);
+        else localStorage.setItem(key, '1');
+      } catch {}
+    });
+  });
+</script>
