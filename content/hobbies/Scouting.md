@@ -1,15 +1,25 @@
 ---
 title: Scouting America
 draft: true
-since: 
-summary: Actively serving as a leader in my local Cub Scout pack.
-tags: [scouting, leadership, community]
+since: "2022-09"
+summary: Cubmaster of the largest pack in Manhattan, and Roundtable Commissioner for the Big Apple district.
+tags: [scouting, leadership, community, volunteering]
 ---
-<!-- From the old Notion portfolio. TODO(AJ): your role in the pack, and WoodBadge status (Notion said "currently in process"). -->
+<!-- Roles and numbers from LinkedIn, October 2026. TODO(AJ): confirm the pack is Pack 662, and WoodBadge status (the old portfolio said "currently in process"). -->
 
-Actively serving as a leader in my local Cub Scout pack.
+## Cubmaster
+
+Since September 2022, Scouting America, Greater New York Councils.
+
+I lead the largest pack in Manhattan, coordinating 75+ youth and 30+ adult volunteers.
 
 Things I've built for it: the [[Pack 662 Website]] and the [[Blackpug Activity Scraper]].
+
+## Roundtable Commissioner
+
+Since June 2025, Big Apple district.
+
+I coordinate, program and lead the district's monthly roundtables.
 
 ## WoodBadge
 
