@@ -2,9 +2,11 @@
 title: "Drums"
 draft: true
 since: 
-summary: 
+summary: I play drums in Amos Ender.
 tags: [music]
 ---
-<!-- TODO(AJ): how long, what you play, whether it is your instrument in [[Amos Ender]]. -->
+<!-- TODO(AJ): how long you've played, and your kit. -->
+
+I play drums in [[Amos Ender]].
 
 See also [[Music Performance]].
