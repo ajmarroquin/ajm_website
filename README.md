@@ -55,4 +55,4 @@ src/
 
 ## Hosting
 
-GitHub Actions builds every push and PR. Deploys to GitHub Pages from `main` once the repo is public. DNS stays at Fastmail: turn off the default A record for `marroqu.in`, and add GitHub Pages' A records (`185.199.108.153`, `.109.153`, `.110.153`, `.111.153`) plus `www` CNAME → `ajmarroquin.github.io`. The subdomains Fastmail hosts aren't affected.
+GitHub Actions builds every push and PR, and deploys `main` to GitHub Pages. In Settings → Pages, Source must be **GitHub Actions** (not "Deploy from a branch", which runs Jekyll on the raw source and fails). DNS stays at Fastmail: turn off the default A record for `marroqu.in`, and add GitHub Pages' A records (`185.199.108.153`, `.109.153`, `.110.153`, `.111.153`) plus `www` CNAME → `ajmarroquin.github.io`. The subdomains Fastmail hosts aren't affected.

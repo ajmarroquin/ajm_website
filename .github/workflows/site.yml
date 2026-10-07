@@ -27,11 +27,10 @@ jobs:
         with:
           path: dist
 
-  # Publishes to GitHub Pages from main. Skipped while the repo is private
-  # (free Pages needs a public repo); starts working once it's made public and
-  # Settings → Pages → Source is set to "GitHub Actions".
+  # Publishes to GitHub Pages from main (on push, or "Run workflow" in the
+  # Actions tab). Needs Settings → Pages → Source set to "GitHub Actions".
   deploy:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && !github.event.repository.private
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     needs: build
     runs-on: ubuntu-latest
     permissions:
