@@ -7,7 +7,7 @@ title: About
 Once geocities and blogging died out, everyone slice of the internet became social media. I've gotten rid of that so I'm going back to carving out a lil' bit of the internet just for me. This is my site, with info about me, what I'm interested in and maybe what I'm doing. We'll see how it goes.
 
 ## About Me
-Me and my family live in NYC. We love hanging in the park, playing D&D, riding bikes (or anything with wheels, including my one wheel), scouting, making and relaxing at home for family movie night. 
+Me and my family live in NYC. We love hanging in the park, playing D&D, riding bikes (or anything with wheels, including my onewheel), scouting, making and relaxing at home for family movie night. 
 
 # Navigate
 This site is intended to feel like you're just exploring the websites directory. Click around and explore! **view** opens a quick look on the side, the file name opens the full page.
