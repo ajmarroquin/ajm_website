@@ -9,5 +9,4 @@ tags: [music, nyc]
 
 In an active music project, creating, recording, and performing in NYC.
 
-The band: [[Amos Ender]]. I play [[Guitar]] and [[Drums]].
-<!-- TODO(AJ): confirm Amos Ender is the music project the old portfolio meant, and which instruments you play in it. -->
+I play [[Drums]] in [[Amos Ender]], an alt rock band led by [[Joshua Klevorn]]. I also play [[Guitar]].

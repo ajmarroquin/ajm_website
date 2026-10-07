@@ -5,6 +5,6 @@ since:
 summary: 
 tags: [music]
 ---
-<!-- TODO(AJ): how long, what you play, whether it is your instrument in [[Amos Ender]]. -->
+<!-- TODO(AJ): how long you've played, and what you play. -->
 
 See also [[Music Performance]].
