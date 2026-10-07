@@ -1,43 +1,50 @@
 ---
-title: "VP, Engineering"
+title: "VP, Engineering & Operations"
 draft: true
 org: Presentation Products, Inc.
 start: "2018"
-end: 
-summary: 
-tags: [leadership, engineering, product]
+end: "2026"
+summary: Led engineering, software, field operations, and IT. Launched Vantage and the 24/7 NOC behind it, moving support from T&M to MRR and growing annual service revenue 20%.
+tags: [leadership, engineering, operations, product, it]
 ---
-<!-- From the old Notion portfolio, which listed this role as 2018 to present. -->
-<!-- TODO(AJ): end date, now that you're Product Owner for AVMS. Also confirm each project below happened in this role. -->
+<!-- From the September 2026 resume, with detail from the old Notion portfolio. The resume also lists "Product Owner & IT Manager" for this period. -->
 
 ## The job
 
-<!-- TODO(AJ): what the role was. The Notion description was placeholder text. -->
+Directed operational strategy, technical design, and cross-functional delivery across engineering, software development, field operations, and IT teams. Led 16 direct reports while providing leadership and mentoring across the full 110-person organization.
 
-Previously: [[Senior Field Engineer]]
+Previously: [[Lead Field Engineer]]. Next: [[AVMS Product Owner]].
 
 ## What I got done
 
-### AV system monitoring and analytics platform
+### Vantage and the NOC
 
-Identified the need for a software product for our business. Led the development of a manufacturer-agnostic platform that provided real-time monitoring and analytics for clients' AV systems. This involved a comprehensive competitor analysis, budgeting, defining requirements, building a team, implementing agile processes, and guiding the development team through product design. It improved client engagement and retention by moving to a monthly subscription model.
+Launched Vantage, a B2B AV monitoring platform, and the 24/7 NOC behind it, moving support from T&M to MRR and growing annual service revenue 20%.
 
-- **Live view:** the team sees status changes across 11.5K+ devices at a glance and can tell whether someone has already picked up a down device. A KPI bar across the top gives top-level numbers for each module.
+I identified the need for a software product for our business and led development of a manufacturer-agnostic platform for real-time monitoring and analytics of clients' AV systems. That covered competitor analysis, budgeting, requirements, building the team, putting agile processes in place, and guiding the team through product design.
+
+Chose Domotz as our data collection appliance, a build vs buy call. Defined how device data feeds Vantage's alerting, dashboards and NOC workflows, and partnered with client IT infrastructure teams on network access and security reviews.
+
+- **Live view:** the team sees device status changes at a glance and can tell whether someone has already picked up a down device. A KPI bar gives top-level numbers for each module.
 - **History view:** event logs for tracking down past issues.
 - **Weekly reporting:** automated reports keep stakeholders up to speed on their AV systems.
 
 <!-- The Notion page had screenshots of these views. Left out on purpose: they show the internal tool, and possibly client data. Decide before adding any. -->
 
-### Version control for AV programming
+### Operations
 
-Version control is unusual in the AV world. I saw that its absence was hurting our long-term ability to manage our programming repositories, and led the charge on putting it in place for the programming team. We grew from 7 GitHub users to 26+.
+Revamped and documented the end-to-end operations workflow, driving scalability, accountability, and better onboarding across technical teams.
 
-### Internal documentation and wiki
+<!-- TODO(AJ): Notion also described an internal documentation wiki (needs assessment, product pick, company-wide daily use). Not on the resume. Keep it here, or cut it? -->
 
-Saw that people needed easy access to documented processes so everyone stayed aligned. Led a needs assessment, picked the product and rolled it out. It's now used daily across the company, so the team has consistent access to what we know.
+### IT and the move to the cloud
 
-### IT administration and the move to the cloud
+Managed corporate IT infrastructure strategy and support operations. When our IT administrator left in 2019, I stepped in for what was supposed to be an interim role and kept it. Led the move from on-premise servers to Azure-based cloud infrastructure, including our ERP, file stores, and identity provider, and rolled out password management and SSO across the company.
 
-When our IT administrator left in 2019, I stepped into what was supposed to be an interim role and kept it for the next five years. That covered day-to-day user support, hardware planning and device management, and moving our ERP, file stores and identity provider from on-prem to the cloud. I also rolled out password management and SSO across the company.
+### Ricoh acquisition
+
+Led IT and operations due diligence for Ricoh's acquisition of PPI, completed January 2026.
 
 ## What I learned
+
+<!-- TODO(AJ) -->

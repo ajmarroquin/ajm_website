@@ -1,21 +1,20 @@
 ---
 title: "Crestron Programmer & Lead Technician"
 draft: true
-org: AviNext
+org: AviNext, College Station, TX
 start: "2009"
 end: "2012"
-summary: 
+summary: Programmed and commissioned Crestron control systems for higher education and government customers.
 tags: [audio-visual, crestron, programming]
 ---
-<!-- From the old Notion portfolio. Its description for this role was placeholder text, so nothing below is filled in yet. -->
-<!-- Org link: https://avinext.com/ -->
+<!-- From the September 2026 resume. -->
 
 ## The job
 
-<!-- TODO(AJ): what the role was. -->
+Programmed and commissioned Crestron control systems for higher education and government customers.
 
-## What I got done
-
-- <!-- TODO(AJ) -->
+Next: [[AV Design and Installation Manager]].
 
 ## What I learned
+
+<!-- TODO(AJ) -->

@@ -1,20 +1,20 @@
 ---
-title: "A/V Design & Installation Manager"
+title: "A/V Design & Installation"
 draft: true
-org: RDM Pros
+org: RDM Pros, Bryan, TX
 start: "2012"
 end: "2013"
-summary: 
+summary: Designed and installed AV systems for commercial and entertainment venues, and managed installation crews and schedules.
 tags: [audio-visual, design, installation]
 ---
-<!-- From the old Notion portfolio. Its description for this role was placeholder text, so nothing below is filled in yet. -->
+<!-- From the September 2026 resume. -->
 
 ## The job
 
-<!-- TODO(AJ): what the role was. -->
+Designed and installed AV systems for commercial and entertainment venues, and managed installation crews and schedules.
 
-## What I got done
-
-- <!-- TODO(AJ) -->
+Previously: [[Crestron Programmer and Lead Technician]]. Next: [[Lead Field Engineer]].
 
 ## What I learned
+
+<!-- TODO(AJ) -->
