@@ -35,7 +35,9 @@ Chose Domotz as our data collection appliance, a build vs buy call. Defined how 
 
 Revamped and documented the end-to-end operations workflow, driving scalability, accountability, and better onboarding across technical teams.
 
-<!-- TODO(AJ): Notion also described an internal documentation wiki (needs assessment, product pick, company-wide daily use). Not on the resume. Keep it here, or cut it? -->
+Saw that people needed easy access to documented processes so everyone stayed aligned, and put an internal documentation wiki in place. I led a needs assessment, picked the product and rolled it out. It's now used daily across the company, so the team has consistent access to what we know.
+
+Kept growing the version control practice I started as a [[Lead Field Engineer]]: our programming team went from 7 GitHub users to 26+.
 
 ### IT and the move to the cloud
 
