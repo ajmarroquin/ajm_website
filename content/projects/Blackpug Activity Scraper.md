@@ -17,7 +17,7 @@ Black Pug Software runs event registration for Scouting America councils. Built 
 
 <!-- TODO(AJ): the backstory. What were you doing by hand before this? -->
 
-Ties into [[Scouting]].
+Related: my role as [[Cubmaster]].
 
 ## How it works
 

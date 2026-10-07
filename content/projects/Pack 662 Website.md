@@ -15,7 +15,7 @@ tags: [scouting, astro, community, privacy]
 
 <!-- TODO(AJ) -->
 
-Ties into [[Scouting]].
+Related: my role as [[Cubmaster]].
 
 ## How it works
 

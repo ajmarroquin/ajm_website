@@ -8,7 +8,7 @@ import { execFileSync } from 'node:child_process';
 import { parse as parseYaml } from 'yaml';
 
 export const VAULT_DIR = path.resolve(process.cwd(), 'content');
-export const SECTIONS = ['work', 'people', 'projects', 'hobbies', 'posts'];
+export const SECTIONS = ['work', 'volunteering', 'people', 'projects', 'hobbies', 'posts'];
 
 export const showDrafts = () =>
   process.env.SHOW_DRAFTS === '1' || process.env.NODE_ENV !== 'production';

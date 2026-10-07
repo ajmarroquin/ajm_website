@@ -10,8 +10,8 @@ const isLink = (v: unknown) => typeof v === 'string' && /^\[\[.*\]\]$/.test(v.tr
 ---
 
 <dl class="props">
-  {s === 'work' && d.org && (<div><dt>org</dt><dd>{d.org}</dd></div>)}
-  {s === 'work' && (<div><dt>when</dt><dd>{d.start} → {d.end ?? 'present'}</dd></div>)}
+  {(s === 'work' || s === 'volunteering') && d.org && (<div><dt>org</dt><dd>{d.org}</dd></div>)}
+  {(s === 'work' || s === 'volunteering') && (<div><dt>when</dt><dd>{d.start} → {d.end ?? 'present'}</dd></div>)}
 
   {s === 'people' && (d.role_then || d.role_now) && (
     <div><dt>role</dt><dd>{d.role_then ?? '?'} → {d.role_now ?? '?'}</dd></div>

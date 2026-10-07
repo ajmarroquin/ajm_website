@@ -17,6 +17,7 @@ I've spent most of my career in the Audio Visual industry, coming from field tec
 This site is intended to feel like you're just exploring the websites directory. Click around and explore! **view** opens a quick look on the side, the file name opens the full page.
 
 - `work/` is where I've been and what I did there
+- `volunteering/` is where I lead and teach outside of work
 - `people/` is the people I've mentored, and what they've gone on to do
 - `projects/` is stuff I've made for fun
 - `hobbies/` is everything else

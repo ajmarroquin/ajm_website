@@ -23,6 +23,7 @@ npm run build:drafts   # production build with drafts showing, for checking
 | Mentee        | `people/`   | a label until they agree to be named (see below) |
 | Role          | `work/`     | the role, e.g. "Product Owner, AVMS"  |
 | Side project  | `projects/` | project name                          |
+| Volunteer role | `volunteering/` | the role, e.g. "Cubmaster"     |
 | Hobby         | `hobbies/`  | hobby                                 |
 | Post          | `posts/`    | post title                            |
 
@@ -41,7 +42,7 @@ Link notes with `[[wikilinks]]`, the same way you would in Obsidian. A link to a
 content/              Obsidian vault (and the site's content)
   README.md           home page intro
   <folder>/README.md  intro shown under each folder's listing
-  work/ people/ projects/ hobbies/ posts/
+  work/ volunteering/ people/ projects/ hobbies/ posts/
   templates/          Obsidian templates (not published)
   attachments/        images and other files, served from the site root
 src/

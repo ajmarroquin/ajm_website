@@ -56,6 +56,16 @@ export const collections = {
     }),
   }),
 
+  volunteering: defineCollection({
+    loader: folder('volunteering'),
+    schema: z.object({
+      ...base,
+      org: opt(z.string()),
+      start: when,
+      end: opt(when),
+    }),
+  }),
+
   people: defineCollection({
     loader: folder('people'),
     schema: z.object({
