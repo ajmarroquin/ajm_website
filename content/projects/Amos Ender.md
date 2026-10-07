@@ -4,22 +4,40 @@ slug: amos-ender
 draft: true
 status: active
 started: 
-url: https://amosender.com
+url: https://www.amosender.com
 repo: 
-summary: My band.
-tags: [music, band, nyc]
+summary: My band. An independent alt rock band in NYC; our debut album, Into The World Of Man, came out in 2025.
+tags: [music, band, alt-rock, nyc]
 ---
-<!-- TODO(AJ): everything below. Claude couldn't reach amosender.com and found nothing else public, so nothing here is filled in. -->
-<!-- Before naming bandmates, check they're OK being on your site, same as mentees. -->
+<!-- From amosender.com, October 2026. TODO(AJ): your part in the band (instrument, how long you've played with them), when the band started, and your own words for "Why". -->
 
 ## Why
 
+<!-- TODO(AJ) -->
+
 ## How it works
 
-<!-- What the band sounds like, who's in it, your part, how you write and record. -->
+Amos Ender is an independent alt rock band from NYC, spearheaded by Joshua Klevorn. The band's site describes the sound as merging left-field ideas with pop, with an old-school indie ethos: "think The Strokes at their peak, or even Franz Ferdinand."
+
+The band comes with a story. Amos Ender is a character who "stepped down into the world of man," and the band's site tells his tale in chapters alongside the music.
 
 ## Where it's at
 
-<!-- Releases, shows, where to listen. -->
+Our debut album, **Into The World Of Man**, came out in 2025, five years and dozens of revisions after the first rushed demos. Mixed and mastered by J. Roman.
+
+Press for the album and the singles "Red Suitcase" and "Tailspin" includes:
+
+> "Merging left-field ideas with pop aspects, Amos Ender taps into an old school indie ethos – think The Strokes at their peak, or even Franz Ferdinand – injected with fresh energy."
+> — Robin Murray, Clash
+
+> "A fierce new force in alternative rock and one of the most exciting rising acts to watch."
+> — Rotate Magazine
+
+> "Into The World Of Man pulses with raw energy, driven by infectious guitar riffs and a pummeling percussion."
+> — Andy Loe, Vents Magazine
+
+Also covered by Backseat Mafia, Music Crowns, Flex and Mystic Sons.
+
+**Listen:** [Spotify](https://open.spotify.com/artist/2Nt0gG43vrYBQiPAZMUUuw) · [Apple Music](https://music.apple.com/us/artist/amos-ender/1481754841) · [YouTube](https://www.youtube.com/@amosender) · [Instagram](https://www.instagram.com/amosender/)
 
 See also [[Music Performance]].
