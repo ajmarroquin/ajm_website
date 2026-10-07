@@ -13,7 +13,7 @@ const { title, description = 'AJ Marroquin: product, people, side projects and r
 const here = Astro.url.pathname;
 const counts = Object.fromEntries(await Promise.all(SECTIONS.map(async (s) => [s.key, (await rows(s.key)).length])));
 const where = ['~', ...path].join('/');
-const pageTitle = path.length ? `${title} · marroqu.in` : title;
+const pageTitle = path.length ? `${title} · aj.marroqu.in` : title;
 ---
 
 <!doctype html>

@@ -1,6 +1,6 @@
-# marroqu.in
+# aj.marroqu.in
 
-AJ's personal site: Astro 7 static site over an Obsidian vault in `content/`. See README.md for the writing workflow.
+AJ's personal site (https://aj.marroqu.in): Astro 7 static site over an Obsidian vault in `content/`. See README.md for the writing workflow.
 
 ## Commands
 

@@ -6,7 +6,7 @@ export async function GET(context: APIContext) {
   const posts = (await rows('posts')).filter((r) => !r.hidden);
   return rss({
     title: 'AJ Marroquin: posts',
-    description: 'Ramblings from marroqu.in',
+    description: 'Ramblings from aj.marroqu.in',
     site: context.site!,
     items: posts.map((r) => ({
       title: r.title,
