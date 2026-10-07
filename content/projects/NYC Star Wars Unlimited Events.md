@@ -28,4 +28,4 @@ Anyone can contribute: fork, edit the JSON, open a pull request. `main` is prote
 
 Live, and tracking 7 stores' weekly nights and 16 bigger events as of the fall 2026 update.
 
-See also [[Star Wars Unlimited]].
+See also [[Trading Card Games]].
