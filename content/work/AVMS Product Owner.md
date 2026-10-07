@@ -16,3 +16,5 @@ Own the vision, roadmap and delivery direction for two AVMS products: Vantage (P
 ## What I got done
 
 - TODO
+
+Previously: [[VP of Engineering]]
