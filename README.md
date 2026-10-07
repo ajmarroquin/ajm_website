@@ -1,4 +1,4 @@
-# marroqu.in
+# aj.marroqu.in
 
 My personal site. It's a folder of Markdown files (`content/`) that doubles as an Obsidian vault, built into a static site with [Astro](https://astro.build) that looks and works like a file browser.
 
@@ -55,4 +55,4 @@ src/
 
 ## Hosting
 
-GitHub Actions builds every push and PR, and deploys `main` to GitHub Pages. In Settings → Pages, Source must be **GitHub Actions** (not "Deploy from a branch", which runs Jekyll on the raw source and fails). DNS stays at Fastmail: turn off the default A record for `marroqu.in`, and add GitHub Pages' A records (`185.199.108.153`, `.109.153`, `.110.153`, `.111.153`) plus `www` CNAME → `ajmarroquin.github.io`. The subdomains Fastmail hosts aren't affected.
+GitHub Actions builds every push and PR, and deploys `main` to GitHub Pages. In Settings → Pages, Source must be **GitHub Actions** (not "Deploy from a branch", which runs Jekyll on the raw source and fails). The site lives at **aj.marroqu.in**. DNS stays at Fastmail, with one custom record: CNAME `aj.marroqu.in` → `ajmarroquin.github.io`. It overrides Fastmail's `*.marroqu.in` wildcard for `aj` only, so mail, the bare domain and the other Fastmail-hosted subdomains aren't affected. The custom domain is set in Settings → Pages (a `CNAME` file in the repo is ignored when deploying with Actions).

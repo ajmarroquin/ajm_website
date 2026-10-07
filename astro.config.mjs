@@ -3,7 +3,7 @@ import { unified } from '@astrojs/markdown-remark';
 import remarkWikilinks from './src/lib/remark-wikilinks.mjs';
 
 export default defineConfig({
-  site: 'https://marroqu.in',
+  site: 'https://aj.marroqu.in',
   // Obsidian saves pasted images into content/attachments; serve them as-is.
   publicDir: './content/attachments',
   trailingSlash: 'always',
