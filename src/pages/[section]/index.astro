@@ -35,11 +35,11 @@ const hasGraph = section === 'people';
       )
     }
   </div>
+  <Readme id={section} label={`${section}/README.md`} />
   <div data-pane="list">
     <Listing rows={list} noun={nouns[section]} />
   </div>
   {hasGraph && <div data-pane="graph" hidden><Graph /></div>}
-  <Readme id={section} label={`${section}/README.md`} />
 </Shell>
 
 {

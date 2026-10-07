@@ -67,6 +67,9 @@
 
 html {
   -webkit-text-size-adjust: 100%;
+  /* Reserve the scrollbar's space on every page, so the frame doesn't jump
+     sideways between short pages (no scrollbar) and long ones. */
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -101,7 +104,8 @@ a {
 /* ---------- window frame ---------- */
 
 .frame {
-  max-width: 1180px;
+  /* Keep a gap at the sides (and room for the shadow) at every width. */
+  max-width: min(1180px, calc(100% - 48px));
   margin: 24px auto;
   background: var(--surface);
   border: 2px solid var(--line);
@@ -311,16 +315,40 @@ a {
 /* ---------- README / documents ---------- */
 
 .readme {
-  margin: 28px 20px 0;
+  margin: 20px 20px 20px;
   border: 1.5px solid var(--line);
   box-shadow: var(--shadow);
   background: var(--surface);
 }
-.readme > header {
+.readme > summary {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   padding: 6px 12px;
-  border-bottom: 1.5px solid var(--line);
   background: var(--surface-2);
   font: 13px/1.4 var(--mono);
+  cursor: pointer;
+  list-style: none;
+}
+.readme > summary::-webkit-details-marker {
+  display: none;
+}
+.readme[open] > summary {
+  border-bottom: 1.5px solid var(--line);
+}
+.readme > summary:hover {
+  background: var(--select);
+}
+.readme-toggle {
+  margin-left: auto;
+  color: var(--muted);
+}
+.readme[open] .when-closed,
+.readme:not([open]) .when-open {
+  display: none;
+}
+.readme-foot {
+  padding: 0 24px 16px;
 }
 .prose {
   padding: 4px 24px 20px;
@@ -592,6 +620,7 @@ dialog.panel::backdrop {
 @media (max-width: 760px) {
   .frame {
     margin: 0;
+    max-width: none;
     border: 0;
     box-shadow: none;
   }
@@ -640,7 +669,7 @@ dialog.panel::backdrop {
     padding-right: 16px;
   }
   .readme {
-    margin: 20px 16px 0;
+    margin: 16px 16px;
   }
   .prose {
     padding: 4px 16px 16px;
