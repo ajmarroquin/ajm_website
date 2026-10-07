@@ -34,7 +34,7 @@ const data = {
   ],
   edges: edges.map(([source, target]) => ({ source, target })),
 };
-const legend = ['work', 'people', 'projects', 'posts'].filter((s) => data.nodes.some((n) => n.section === s));
+const legend = ['work', 'volunteering', 'people', 'projects', 'hobbies', 'posts'].filter((s) => data.nodes.some((n) => n.section === s));
 ---
 
 <figure class="graph" aria-label="Graph of mentees and the roles they were mentored in">

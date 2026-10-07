@@ -1,12 +1,13 @@
 import { getCollection, getEntry, type CollectionEntry } from 'astro:content';
 import { fileMeta, isPublished, resolve, loadVault } from './vault.mjs';
 
-export type SectionKey = 'work' | 'people' | 'projects' | 'hobbies' | 'posts';
+export type SectionKey = 'work' | 'volunteering' | 'people' | 'projects' | 'hobbies' | 'posts';
 export type Entry = CollectionEntry<SectionKey>;
 
 // Order and one-line descriptions for the sidebar and the root listing.
 export const SECTIONS: { key: SectionKey; blurb: string }[] = [
   { key: 'work', blurb: 'Roles, and what I got done in them' },
+  { key: 'volunteering', blurb: 'Where I lead and teach outside of work' },
   { key: 'people', blurb: 'People I have mentored, and where they went' },
   { key: 'projects', blurb: 'Things I build on the side' },
   { key: 'hobbies', blurb: 'What I do when I am not working' },
@@ -58,9 +59,11 @@ export async function rows(section: SectionKey): Promise<Row[]> {
       };
     })
     .sort((a, b) => {
-      // "present" (no end date) sorts first for work; otherwise newest first.
-      const ae = section === 'work' && !(a.entry.data as any).end ? '9999' : sortKey(a.entry);
-      const be = section === 'work' && !(b.entry.data as any).end ? '9999' : sortKey(b.entry);
+      // Current roles (no end date) sort first; otherwise newest first.
+      const roles = section === 'work' || section === 'volunteering';
+      const key = (e: Entry) => (roles && !(e.data as any).end ? `9999 ${(e.data as any).start}` : sortKey(e));
+      const ae = key(a.entry);
+      const be = key(b.entry);
       return be.localeCompare(ae) || a.title.localeCompare(b.title);
     });
 }
