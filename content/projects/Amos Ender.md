@@ -6,11 +6,11 @@ status: active
 started: 
 url: https://www.amosender.com
 repo: 
-summary: I play drums in Amos Ender, an independent alt rock band in NYC. Our debut album, Into The World Of Man, came out in 2025.
+summary: I play drums in Amos Ender, an independent rock duo in NYC. Our debut album, Into The World Of Man, came out in 2025.
 tags: [music, band, alt-rock, nyc]
 ---
 
-I play [[Drums]] in Amos Ender, an independent alt rock band from NYC spearheaded by [[Joshua Klevorn]].
+I play [[Drums]] in Amos Ender, an independent rock duo from NYC with my friend [[Joshua Klevorn]].
 
 ## Where it's at
 

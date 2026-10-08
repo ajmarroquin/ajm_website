@@ -4,7 +4,7 @@ slug: eric-gerhardt
 draft: true
 consent: false
 summary: IT Helpdesk -> AV Field Engineer -> Software Engineer & Technical Architect.
-role_then: IT Helpdesk
+role_then: AV Field Engineer
 role_now: Technical Architect
 mentored_during:
   - "[[VP of Engineering]]"

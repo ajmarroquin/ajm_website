@@ -8,4 +8,4 @@ tags: [music, nyc]
 
 I'm in an active music project, creating, recording, and performing in NYC.
 
-I play [[Drums]] in [[Amos Ender]], an alt rock band with my friend [[Joshua Klevorn]]. I also play [[Guitar]].
+I play [[Drums]] in [[Amos Ender]], an independent rock duo with my friend [[Joshua Klevorn]]. I also play [[Guitar]].
