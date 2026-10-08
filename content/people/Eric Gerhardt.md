@@ -6,7 +6,9 @@ consent: false
 summary: IT Helpdesk -> AV Field Engineer -> Software Engineer & Technical Architect.
 role_then: IT Helpdesk
 role_now: Technical Architect
-mentored_during: "[[VP Engineering & Operations]][[AVMS Product Owner]]"
+mentored_during:
+  - "[[VP of Engineering]]"
+  - "[[AVMS Product Owner]]"
 how: 1:1s, Software & Infrastructure brainstorming
 outcomes:
   - Moved from AV focus to Software focus

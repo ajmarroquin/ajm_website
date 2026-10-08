@@ -13,7 +13,7 @@ tags: [scouting, automation, javascript, python, privacy]
 
 ## Why
 
-Black Pug Software runs event registration for Scouting America councils. Individual families would register, and as a unit leader I could view when they did but had to comb this line by line with no export. I built this for me and published hoping to benefit all units withing Greater New York Councils and Nationally. It pulls a unit's registrations into a workbook with a tab per event, so leaders can see who's booked and who started registering but never finished.
+Black Pug Software runs event registration for Scouting America councils. Individual families would register, and as a unit leader I could see when they did, but had to comb through it line by line with no export. I built this for myself and published it, hoping it would benefit all units within Greater New York Councils and nationally. It pulls a unit's registrations into a workbook with a tab per event, so leaders can see who's booked and who started registering but never finished.
 
 
 

@@ -11,7 +11,7 @@ tags: [brand, personal]
 ---
 
 ## Why
-The name came to me in a fever dream. Giant sparkly squishy baloons that spelled out Sushi Prophets
+The name came to me in a fever dream: giant, sparkly, squishy balloons that spelled out Sushi Prophets.
 
 ## How it works
 uhhhhhh

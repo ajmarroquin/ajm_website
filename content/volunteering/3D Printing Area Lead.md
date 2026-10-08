@@ -10,7 +10,7 @@ tags: [3d-printing, teaching, making, volunteering]
 
 ## The role
 
-I help lead the 3D printing area at Fat Cat Fab Lab, a community makerspace in NYC, with a few other lead. We help maintain the printers and ensure that they are in good shape for all makers to use.
+I help lead the 3D printing area at Fat Cat Fab Lab, a community makerspace in NYC, with a few other leads. We help maintain the printers and ensure that they are in good shape for all makers to use.
 
 ## Teaching
 

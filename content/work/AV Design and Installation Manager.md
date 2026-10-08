@@ -17,6 +17,6 @@ Previously: [[Crestron Programmer and Lead Technician]]. Next: [[Lead Field Engi
 
 ## What I learned
 
-- Live sound design and installation. 
+- Live sound design and installation
 - Crew scheduling logistics
 - DSP calibration with RTA mics
