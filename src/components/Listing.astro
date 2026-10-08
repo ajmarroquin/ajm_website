@@ -7,6 +7,11 @@ interface Props {
   noun?: string;
 }
 const { rows, noun = 'files' } = Astro.props;
+
+// The line under each file name: the note's summary, or its title when it
+// has no summary and the title says more than the file name.
+const subline = (r: Row) =>
+  r.entry.data.summary ?? (r.title !== r.file.replace(/\.md$/, '') ? r.title : undefined);
 ---
 
 {
@@ -32,7 +37,7 @@ const { rows, noun = 'files' } = Astro.props;
             <td class="name">
               <a href={r.href}>{r.file}</a>
               {r.hidden && <span class="badge">{r.hidden}</span>}
-              {r.title !== r.file.replace(/\.md$/, '') && <span class="title">{r.title}</span>}
+              {subline(r) && <span class="title">{subline(r)}</span>}
             </td>
             <td class="num">{r.modified}</td>
             <td class="num hide-sm">{humanSize(r.size)}</td>
