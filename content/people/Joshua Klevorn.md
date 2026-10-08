@@ -2,14 +2,14 @@
 title: "Joshua Klevorn"
 slug: joshua-klevorn
 draft: true
-consent: true
+consent: false
 summary: Bandmate. Josh leads Amos Ender, where I play drums.
 role_now: Leads Amos Ender
 links:
   - "[[Amos Ender]]"
 tags: [music, friends]
 ---
-<!-- consent: true because AJ said Josh should be here. TODO(AJ): how you met, and what Josh means to you, like Lacey's page. -->
+<!-- TODO(AJ): get Josh's OK, then flip consent and draft. Add how you met and what Josh means to you, like Lacey's page. -->
 
 ## Who they are
 

@@ -25,6 +25,8 @@ I own product direction for Vantage and Constant Connect, used by 700+ customers
 
 - Global stakeholder management
 - Big Room Planning
+- Working with AI agents in a real delivery loop building internal production tooling
+- Guardrails for AI within CI/CD
 
 
 Previously: [[VP of Engineering]]

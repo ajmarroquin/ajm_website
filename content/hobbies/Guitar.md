@@ -2,7 +2,7 @@
 title: "Guitar"
 draft: false
 since: 
-summary: 
+summary: "Strum Strum Strum"
 tags: [music]
 ---
 

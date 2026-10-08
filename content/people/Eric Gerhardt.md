@@ -15,7 +15,7 @@ outcomes:
   - Mentored incoming software dev
   - Seen as technical leader in PPI and Cenero
 links:
-  - "[[Vantage]]"
+  - "[[VP of Engineering]]"
 tags: [mentoring]
 ---
 
@@ -28,7 +28,3 @@ I met Eric as a customer while I was still a field engineer. Later when he was l
 Through 1:1s I was able to help marry his interest in software, with a need we had identified in the business for a customer portal. I pitched the budget, scope and plan to execs, secured a transition to software development and started the team with Eric. Early software development was us and a whiteboard with big ideas on designing the infrastructure, UI, and how we'd align these to stakeholders desires.
 
 Through continual 1:1s over the years I helped shape how we built a team, tried scrum principles, shifted to Shape up and continued to grow the product.
-
-## What they've done since
-
-- 

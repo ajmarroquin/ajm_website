@@ -3,7 +3,7 @@ import Shell from '../../layouts/Shell.astro';
 import Listing from '../../components/Listing.astro';
 import Readme from '../../components/Readme.astro';
 import Graph from '../../components/Graph.astro';
-import { SECTIONS, rows, type SectionKey } from '../../lib/content';
+import { SECTIONS, rows, loadVault, type SectionKey } from '../../lib/content';
 
 export function getStaticPaths() {
   return SECTIONS.map((s) => ({ params: { section: s.key }, props: { blurb: s.blurb } }));
@@ -21,6 +21,9 @@ const nouns: Record<SectionKey, string> = {
   posts: 'posts',
 };
 const hasGraph = section === 'people';
+// People who have a note but haven't agreed to be on the site yet. Only the
+// count is shown, never who they are.
+const awaiting = section === 'people' ? loadVault().notes.filter((n) => n.section === 'people' && !n.consent).length : 0;
 ---
 
 <Shell title={`${section}/`} description={blurb} path={[section]} status={`${list.length} items`}>
@@ -39,6 +42,7 @@ const hasGraph = section === 'people';
   <Readme id={section} label={`${section}/README.md`} />
   <div data-pane="list">
     <Listing rows={list} noun={nouns[section]} />
+    {awaiting > 0 && <p class="empty">Currently seeking approval from {awaiting} more {awaiting === 1 ? 'person' : 'people'}.</p>}
   </div>
   {hasGraph && <div data-pane="graph" hidden><Graph /></div>}
 </Shell>

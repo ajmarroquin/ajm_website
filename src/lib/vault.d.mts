@@ -6,6 +6,8 @@ export interface VaultNote {
   title: string;
   href: string;
   draft: boolean;
+  /** people/ only: they've agreed to be on the site. */
+  consent: boolean;
   published: boolean;
   /** Keys of notes this one links to. */
   links: string[];
