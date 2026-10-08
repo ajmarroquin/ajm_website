@@ -8,7 +8,7 @@ export type Entry = CollectionEntry<SectionKey>;
 export const SECTIONS: { key: SectionKey; blurb: string }[] = [
   { key: 'work', blurb: 'Roles, and what I got done in them' },
   { key: 'volunteering', blurb: 'Where I lead and teach outside of work' },
-  { key: 'people', blurb: 'People I have mentored, and where they went' },
+  { key: 'people', blurb: 'People who shaped me, and people I have mentored' },
   { key: 'projects', blurb: 'Things I build on the side' },
   { key: 'hobbies', blurb: 'What I do when I am not working' },
   { key: 'posts', blurb: 'Ramblings' },

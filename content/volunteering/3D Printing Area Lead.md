@@ -4,7 +4,7 @@ draft: false
 org: Fat Cat Fab Lab
 start: "2025-07"
 end: "Current"
-summary: Lead the 3D printing area at a community makerspace in NYC, maintain the lab's printers, and teach adults to use them safely.
+summary: Co-lead the 3D printing area at a community makerspace in NYC, maintain the lab's printers, and teach adults to use them safely.
 tags: [3d-printing, teaching, making, volunteering]
 ---
 

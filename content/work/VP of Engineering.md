@@ -1,10 +1,10 @@
 ---
 title: "VP, Engineering & Operations"
 draft: false
-org: Presentation Products, Inc., a Ricoh Company
+org: Presentation Products, Inc.
 start: "2018"
 end: "2026"
-summary: Led architectural engineering, software, field commissioning, control systems programming, and IT. Launched Vantage, our AV Managed Services software, which ran our 24/7 NOC.
+summary: Led architectural engineering, software, field commissioning, control systems programming, and IT. Launched Vantage, our AV Managed Services software, and the 24/7 NOC behind it.
 tags: [leadership, engineering, operations, product, it]
 ---
 
