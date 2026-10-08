@@ -16,7 +16,7 @@ Next: [[AV Design and Installation Manager]].
 
 ## What I learned
 
-- Commercial & higher ed AV system installs
+- Higher education & government AV system installs
 - Crestron Programming
     - Mentored by [[Josh Minneman]]
 - Networking
