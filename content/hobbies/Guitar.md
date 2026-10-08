@@ -1,6 +1,6 @@
 ---
 title: "Guitar"
-draft: False
+draft: false
 since: 
 summary: 
 tags: [music]

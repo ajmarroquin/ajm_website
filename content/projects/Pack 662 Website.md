@@ -1,7 +1,7 @@
 ---
 title: Pack 662 Website
 slug: pack662nyc
-draft: Flase
+draft: false
 status: shipped
 started: "2026-09"
 url: https://pack662nyc.com

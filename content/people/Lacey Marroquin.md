@@ -1,8 +1,8 @@
 ---
 title: "Lacey Marroquin"
 slug: lacey-marroquin
-draft: False
-consent: True
+draft: false
+consent: true
 summary: My wife!
 role_then: Friend -> Girlfriend
 role_now: Wife & Mother

@@ -1,6 +1,6 @@
 ---
 title: Roundtable Commissioner
-draft: False
+draft: false
 org: Scouting America, Greater New York Councils
 start: "2025-06"
 end: "Current"

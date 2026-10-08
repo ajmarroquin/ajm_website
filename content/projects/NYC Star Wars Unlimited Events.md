@@ -1,7 +1,7 @@
 ---
 title: NYC Star Wars Unlimited Events
 slug: nyc-swu
-draft: flase
+draft: false
 status: active
 started: "2026-04"
 url: https://ajmarroquin.github.io/nyc-swu/

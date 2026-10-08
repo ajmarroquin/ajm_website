@@ -1,6 +1,6 @@
 ---
 title: 3D Printing Area Lead & Teacher
-draft: Flase
+draft: false
 org: Fat Cat Fab Lab
 start: "2025-07"
 end: "Current"

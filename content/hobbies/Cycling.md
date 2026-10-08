@@ -1,8 +1,8 @@
 ---
 title: "Cycling"
-draft: False
+draft: false
 since: 
-summary: "Two wheels good!""
+summary: "Two wheels good!"
 tags: [cycling, nyc]
 ---
 

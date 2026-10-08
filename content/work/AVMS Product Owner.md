@@ -1,7 +1,7 @@
 ---
 title: "Product Owner, AV Managed Services Platform"
 slug: avms-product-owner
-draft: False
+draft: false
 org: Presentation Products, Inc., a Ricoh Company
 start: "2026"
 end: "Current"

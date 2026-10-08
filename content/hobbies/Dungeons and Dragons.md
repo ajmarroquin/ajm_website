@@ -1,6 +1,6 @@
 ---
 title: "Dungeons & Dragons"
-draft: False
+draft: false
 since: 
 summary: Real scared of owlbears
 tags: [games, ttrpg, family]

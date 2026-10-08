@@ -1,6 +1,6 @@
 ---
 title: Trading Card Games
-draft: False
+draft: false
 since: 
 summary: Star Wars Unlimited, Sorcery and Lorcana.
 tags: [tcg, games]

@@ -1,6 +1,6 @@
 ---
 title: "Drums"
-draft: False
+draft: false
 since: 
 summary: I play drums in Amos Ender.
 tags: [music]

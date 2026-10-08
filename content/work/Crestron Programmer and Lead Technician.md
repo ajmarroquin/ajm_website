@@ -1,6 +1,6 @@
 ---
 title: "Crestron Programmer & Lead Technician"
-draft: Flase
+draft: false
 org: AviNext, College Station, TX
 start: "2009"
 end: "2012"

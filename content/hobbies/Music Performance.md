@@ -1,6 +1,6 @@
 ---
 title: "Music Performance"
-draft: False
+draft: false
 since: 
 summary: "In an active music project, creating, recording, and performing in NYC."
 tags: [music, nyc]
