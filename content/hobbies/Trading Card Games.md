@@ -6,7 +6,7 @@ summary: Star Wars Unlimited, Sorcery and Lorcana.
 tags: [tcg, games]
 ---
 
-As a kid I collected pokemon cards... but never really played. I played a few rounds with my son as he started collecting pokemon cards but then Thanksgiving of 2025, my brother-in-law [[Chris Allison]] showed me Star Wars Unlimited and... I was hooked. A month later I had 1000s of cards and was attending weekly events having friendly competition with folks from all over NYC. Since then, my love of TCGs has grown and I've started playing others with friends and family.
+As a kid I collected Pokémon cards... but never really played. I played a few rounds with my son as he started collecting Pokémon cards, but then over Thanksgiving 2025, my brother-in-law [[Chris Allison]] showed me Star Wars Unlimited and... I was hooked. A month later I had thousands of cards and was attending weekly events having friendly competition with folks from all over NYC. Since then, my love of TCGs has grown and I've started playing others with friends and family.
 
 ## Star Wars Unlimited
 

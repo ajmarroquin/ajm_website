@@ -17,7 +17,7 @@ Previously: [[AV Design and Installation Manager]]. Next: [[VP of Engineering]].
 ## What I got done
 ### Version control for AV programming
 
-Version control is unusual in the AV world. I saw that its absence was hurting our long-term ability to manage our programming repositories, so I moved our Crestron and DSP code into GitHub and set up 1Password for credential and secret management. Adoption kept growing through my time as [[VP of Engineering]]: from 7 GitHub users to 26+.
+Version control is unusual in the AV world. I saw that its absence was hurting our long-term ability to manage our programming repositories, so I moved our Crestron and DSP code into GitHub and set up 1Password for credential and secret management. Adoption kept growing through my time as [[VP of Engineering]]: from 7 GitHub users to 30+.
 
 ## What I learned
 

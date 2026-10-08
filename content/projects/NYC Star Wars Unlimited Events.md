@@ -12,7 +12,7 @@ tags: [star-wars-unlimited, community, nyc, github-pages]
 
 ## Why
 
-As a new trading card gamer, it was very scary to go to my first weekly. I didn't know what to expect, I didn't know if my deck would work or if my cards were legal. The only way in was through a Discord community and taking a big leap. This site was developed to collect all of the weeklies, clearly communicate to new players about the NYC SWU community. 
+As a new trading card gamer, it was very scary to go to my first weekly. I didn't know what to expect, I didn't know if my deck would work or if my cards were legal. The only way in was through a Discord community and taking a big leap. This site collects all of the weeklies in one place and clearly explains the NYC SWU community to new players.
 
 ## How it works
 

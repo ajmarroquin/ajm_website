@@ -16,6 +16,9 @@ export const SECTIONS: { key: SectionKey; blurb: string }[] = [
 
 export const titleOf = (e: Entry) => e.data.title ?? e.id;
 
+// A role is ongoing with no end date, or an end like "Current" or "present".
+export const isOngoing = (end: unknown) => !end || /^(current|present|now)$/i.test(String(end).trim());
+
 export interface Row {
   entry: Entry;
   file: string;
@@ -61,7 +64,7 @@ export async function rows(section: SectionKey): Promise<Row[]> {
     .sort((a, b) => {
       // Current roles (no end date) sort first; otherwise newest first.
       const roles = section === 'work' || section === 'volunteering';
-      const key = (e: Entry) => (roles && !(e.data as any).end ? `9999 ${(e.data as any).start}` : sortKey(e));
+      const key = (e: Entry) => (roles && isOngoing((e.data as any).end) ? `9999 ${(e.data as any).start}` : sortKey(e));
       const ae = key(a.entry);
       const be = key(b.entry);
       return be.localeCompare(ae) || a.title.localeCompare(b.title);

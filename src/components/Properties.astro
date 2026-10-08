@@ -1,22 +1,26 @@
 ---
 import type { Entry } from '../lib/content';
 import NoteLink from './NoteLink.astro';
+import { isOngoing } from '../lib/content';
 
 const { entry } = Astro.props as { entry: Entry };
 const d = entry.data as Record<string, any>;
 const s = entry.collection;
 const fmtDate = (v: Date) => v.toISOString().slice(0, 10);
+const mentoredDuring: string[] = [d.mentored_during ?? []].flat().filter(Boolean);
 const isLink = (v: unknown) => typeof v === 'string' && /^\[\[.*\]\]$/.test(v.trim());
 ---
 
 <dl class="props">
   {(s === 'work' || s === 'volunteering') && d.org && (<div><dt>org</dt><dd>{d.org}</dd></div>)}
-  {(s === 'work' || s === 'volunteering') && (<div><dt>when</dt><dd>{d.start} → {d.end ?? 'present'}</dd></div>)}
+  {(s === 'work' || s === 'volunteering') && (<div><dt>when</dt><dd>{d.start} → {isOngoing(d.end) ? 'present' : d.end}</dd></div>)}
 
   {s === 'people' && (d.role_then || d.role_now) && (
     <div><dt>role</dt><dd>{d.role_then ?? '?'} → {d.role_now ?? '?'}</dd></div>
   )}
-  {s === 'people' && d.mentored_during && (<div><dt>mentored during</dt><dd><NoteLink to={d.mentored_during} /></dd></div>)}
+  {s === 'people' && mentoredDuring.length > 0 && (
+    <div><dt>mentored during</dt><dd>{mentoredDuring.map((m, i) => <>{i > 0 && ', '}<NoteLink to={m} /></>)}</dd></div>
+  )}
   {s === 'people' && d.how && (<div><dt>how</dt><dd>{d.how}</dd></div>)}
   {s === 'people' && d.outcomes?.length > 0 && (
     <div><dt>outcomes</dt><dd><ul>{d.outcomes.map((o: string) => <li>{o}</li>)}</ul></dd></div>

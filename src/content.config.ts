@@ -73,7 +73,7 @@ export const collections = {
       consent: z.boolean().default(false),
       role_then: opt(z.string()),
       role_now: opt(z.string()),
-      mentored_during: opt(link),
+      mentored_during: opt(z.union([link, list(link)])),
       how: opt(z.string()),
       outcomes: list(z.string()),
       links: list(link),
