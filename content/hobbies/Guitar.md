@@ -2,7 +2,7 @@
 title: "Guitar"
 draft: false
 since: 
-summary: 
+summary: "Drums are my main instrument, but I love strumming an acoustic by the fire."
 tags: [music]
 ---
 

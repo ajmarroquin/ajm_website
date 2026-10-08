@@ -1,6 +1,6 @@
 ---
 title: "Lead Field Engineer"
-draft: true
+draft: false
 org: Presentation Products, Inc.
 start: "2013"
 end: "2018"

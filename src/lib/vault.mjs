@@ -95,6 +95,7 @@ export function loadVault() {
         title: data.title ?? data.name ?? path.basename(name, '.md'),
         href: `/${section}/${id}/`,
         draft: data.draft === true,
+        consent: data.consent === true,
         published: isPublished(section, data),
         links: linksIn(data, body),
       };
