@@ -1,10 +1,10 @@
 ---
 title: "Camping"
-draft: true
+draft: False
 since: 
 summary: "I love camping with my family."
 tags: [camping, family]
 ---
-<!-- From the old Notion portfolio. TODO(AJ): say more, or leave it short. -->
 
-I love camping with my family.
+
+We camp with scouts 2-5 times a year and often more on our own. We've taken road trips from NYC, camping on the way to TX, then up to Michigan and back to NYC. We've flow to the west coast and camped in Big Sur, the redwoods and all the way up to seattle. Special stop on that trip in Astoria to visit some filiming locations for 'The Goonies'!

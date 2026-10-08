@@ -1,7 +1,7 @@
 ---
 title: Blackpug Activity Scraper
 slug: blackpug-activity-scraper
-draft: true
+draft: False
 status: shipped
 started: "2025-04"
 url: https://ajmarroquin.github.io/blackpug-activity-scraper/
@@ -13,9 +13,9 @@ tags: [scouting, automation, javascript, python, privacy]
 
 ## Why
 
-Black Pug Software runs event registration for Scouting America councils. Built for Greater New York Council units, it pulls a unit's registrations into a workbook with a tab per event, so leaders can see who's booked and who started registering but never finished. That second list is for follow-up.
+Black Pug Software runs event registration for Scouting America councils. Individual families would register, and as a unit leader I could view when they did but had to comb this line by line with no export. I built this for me and published hoping to benefit all units withing Greater New York Councils and Nationally. It pulls a unit's registrations into a workbook with a tab per event, so leaders can see who's booked and who started registering but never finished.
 
-<!-- TODO(AJ): the backstory. What were you doing by hand before this? -->
+
 
 Related: my role as [[Cubmaster]].
 
@@ -33,4 +33,4 @@ The browser version has unit tests and a Playwright end-to-end test that runs ag
 
 ## Where it's at
 
-Shipped and in use. It depends on Black Pug's page layout, so a redesign on their end means an update here.
+Shipped and in use.

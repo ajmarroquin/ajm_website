@@ -1,10 +1,9 @@
 ---
 title: "Onewheel"
-draft: true
+draft: False
 since: 
-summary: "I love cruising around the city on my Onewheel 🤙🏼"
+summary: "Onewheel GOOOOD!"
 tags: [onewheel, nyc]
 ---
-<!-- From the old Notion portfolio. TODO(AJ): say more, or leave it short. -->
 
-I love cruising around the city on my Onewheel 🤙🏼
+I love cruising around the city on my Onewheel! 🤙🏼 I purchased my first one in Feb 2020, and since have owned 3 different onewheels and ridden 5K+ miles on my electric magic carpet.  

@@ -1,16 +1,15 @@
 ---
 title: Roundtable Commissioner
-draft: true
+draft: False
 org: Scouting America, Greater New York Councils
 start: "2025-06"
-end: 
+end: "Current"
 summary: Coordinate, program and lead monthly roundtables for the Big Apple district.
 tags: [scouting, leadership, volunteering]
 ---
-<!-- Role, dates and description from LinkedIn, October 2026. TODO(AJ): what a roundtable is for, and who comes (unit leaders across the district?). -->
 
 ## The role
 
-I coordinate, program and lead the Big Apple district's monthly roundtables.
+I coordinate, program and lead the Big Apple district's monthly roundtables. Roundtables are the place the district communicates to all units across all of Scouting America's programs. We gather leaders together to communicate updates, build community and teach them skills.
 
 Alongside my role as [[Cubmaster]].

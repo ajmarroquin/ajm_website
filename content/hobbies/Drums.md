@@ -1,12 +1,11 @@
 ---
 title: "Drums"
-draft: true
+draft: False
 since: 
 summary: I play drums in Amos Ender.
 tags: [music]
 ---
-<!-- TODO(AJ): how long you've played, and your kit. -->
 
-I play drums in [[Amos Ender]].
+I play drums in [[Amos Ender]]. I started playing in 6th grade, spent time playing in many church bands and eventually started a duo with my buddy [[Joshua Klevorn]]
 
 See also [[Music Performance]].

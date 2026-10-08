@@ -1,13 +1,13 @@
 ---
 title: "A/V Design & Installation"
-draft: true
+draft: False
 org: RDM Pros, Bryan, TX
 start: "2012"
 end: "2013"
 summary: Designed and installed AV systems for commercial and entertainment venues, and managed installation crews and schedules.
 tags: [audio-visual, design, installation]
 ---
-<!-- From the September 2026 resume. -->
+
 
 ## The job
 
@@ -17,4 +17,6 @@ Previously: [[Crestron Programmer and Lead Technician]]. Next: [[Lead Field Engi
 
 ## What I learned
 
-<!-- TODO(AJ) -->
+- Live sound design and installation. 
+- Crew scheduling logistics
+- DSP calibration with RTA mics

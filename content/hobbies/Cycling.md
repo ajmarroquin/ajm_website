@@ -1,10 +1,10 @@
 ---
 title: "Cycling"
-draft: true
+draft: False
 since: 
-summary: "I enjoy cycling to the office and rides through Central Park with my wife."
+summary: "Two wheels good!""
 tags: [cycling, nyc]
 ---
-<!-- From the old Notion portfolio. TODO(AJ): say more, or leave it short. -->
 
-I enjoy cycling to the office and rides through Central Park with my wife.
+
+I enjoy cycling to the office and rides through Central Park with my wife. Previously me and my wife each owned 5 bikes, before moving to NYC. Now cycling is mostly a commute but it's still something I love.

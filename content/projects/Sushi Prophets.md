@@ -1,21 +1,21 @@
 ---
 title: Sushi Prophets
 slug: sushi-prophets
-draft: true
+draft: False
 status: idea
-started: 
+started: 2025-03
 url: https://sushiprophets.com
 repo: 
 summary: My personal brand, which I hope to launch some day.
 tags: [brand, personal]
 ---
-<!-- The project's repo is private, and right now it's only a "see you soon..." page and the logo. This repo is public, so anything written here is readable on GitHub even while the note is a draft. Only add what you're happy to have out there before launch. -->
-<!-- TODO(AJ): what it is, and whether to show the logo (it isn't copied into this repo). -->
 
 ## Why
+The name came to me in a fever dream. Giant sparkly squishy baloons that spelled out Sushi Prophets
 
 ## How it works
+uhhhhhh
 
 ## Where it's at
 
-Not launched yet. See you soon...
+Ideation. I've got a few products planned, all based around my personal favorite items. Not launched yet. See you soon...

@@ -1,20 +1,19 @@
 ---
 title: "Product Owner, AV Managed Services Platform"
 slug: avms-product-owner
-draft: true
+draft: False
 org: Presentation Products, Inc., a Ricoh Company
 start: "2026"
-end: 
+end: "Current"
 summary: Own product direction for Vantage and Constant Connect, used by 700+ customers to monitor 35K devices across 2,500 rooms, and lead the plan to merge them into one experience.
 tags: [product, avms, vantage, constant-connect]
 ---
-<!-- From the September 2026 resume. -->
 
 ## The job
 
 I own product direction for Vantage and Constant Connect, used by 700+ customers to monitor 35K devices across 2,500 rooms and supporting a $20M service business. I'm also leading the plan to merge both products into one experience, working across two Ricoh subsidiaries mid-integration and aligning product direction, engineering, NOC, and sales around a shared roadmap.
 
-## What I got done
+## What I do
 
 - Ship features and fixes alongside the engineering team using AI-assisted development.
 - Use PostHog within Vantage for product analytics, error tracking, and feature flags.
@@ -22,8 +21,11 @@ I own product direction for Vantage and Constant Connect, used by 700+ customers
 - Built internal tools, including a labor forecasting dashboard, an engineering capacity forecaster, a cross-org chat replacement platform POC, and a release notes generator.
 - Own the full feedback loop from customers, NOC, field, and development teams, shaping requests into scoped work on the roadmap.
 
-## What I learned
+## What I'm learning
 
-<!-- TODO(AJ) -->
+- Global stakeholder management
+- Big Room Planning
+-
+
 
 Previously: [[VP of Engineering]]

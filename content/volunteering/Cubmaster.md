@@ -1,13 +1,12 @@
 ---
 title: Cubmaster
-draft: true
+draft: False
 org: Scouting America, Greater New York Councils
 start: "2022-09"
-end: 
+end: "Current"
 summary: Lead the largest Cub Scout pack in Manhattan, coordinating 75+ youth and 30+ adult volunteers.
 tags: [scouting, leadership, volunteering]
 ---
-<!-- Role, dates and numbers from LinkedIn, October 2026. TODO(AJ): confirm the pack is Pack 662, and add what the job involves day to day. -->
 
 ## The role
 
@@ -22,6 +21,13 @@ Also: [[Roundtable Commissioner]] for the Big Apple district.
 
 ## WoodBadge
 
-WoodBadge is the leader training for Scouting America: 40 hours of coursework with three nights of camping, ending in an 18-month project. That project is a chance to move the needle and push yourself and your pack to do better for the community.
+WoodBadge is the leader training for Scouting America: 40 hours of coursework with three nights of camping, ending in an 18-month project. That project is a chance to move the needle and push yourself and your pack to do better for the community. 
 
-<!-- TODO(AJ): WoodBadge status. The old portfolio said "currently in process". -->
+Course: 10-640-24
+Completed: Aug 14, 2025
+Beaded: Sep 6th, 2025
+
+I used to be a fox.
+
+
+
