@@ -49,5 +49,7 @@ Led IT and operations due diligence for Ricoh's acquisition of PPI, completed Ja
     - This was my first role managing other people. 8 years later, I've grown a bunch in this area and have built many strong technical teams across different domains within the org. 💪
 - 0→1 Software Development
     - My prior technical experience and development of control systems programming gave me the groundwork to consider how to do this, but learning to build a B2B webapp took a lot of reading, growth, and willingness to try new things. Shout out to Refactoring, PostHog, 37signals & many others in the software community for writing about how to work! 
+- Feature Flagging
+    - Learned shipping Vantage: putting features behind flags separates deploying code from releasing it.
 - Executive Strategy
     - EBITDA, P&L, Budgets, OKRs, BHAG, 5 year plans and selling the company! Lots of new learning with the PPI team over the last 13+ years!
