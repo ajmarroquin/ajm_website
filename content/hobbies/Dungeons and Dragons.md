@@ -1,8 +1,9 @@
 ---
 title: "Dungeons & Dragons"
-draft: true
+draft: False
 since: 
-summary: Playing D&D with my family.
+summary: Real scared of owlbears
 tags: [games, ttrpg, family]
 ---
-<!-- From your home README ("We love ... playing D&D"). TODO(AJ): DM or player, the campaign, who plays. -->
+
+Our family loves taking time to play games together. We play TCGs, we play board games and we play D&D. 

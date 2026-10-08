@@ -1,12 +1,11 @@
 ---
 title: "Music Performance"
-draft: true
+draft: False
 since: 
 summary: "In an active music project, creating, recording, and performing in NYC."
 tags: [music, nyc]
 ---
-<!-- From the old Notion portfolio. TODO(AJ): say more, or leave it short. -->
 
 In an active music project, creating, recording, and performing in NYC.
 
-I play [[Drums]] in [[Amos Ender]], an alt rock band led by [[Joshua Klevorn]]. I also play [[Guitar]].
+I play [[Drums]] in [[Amos Ender]], an alt rock band with my friend [[Joshua Klevorn]]. I also play [[Guitar]].

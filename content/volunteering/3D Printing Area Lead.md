@@ -1,17 +1,16 @@
 ---
 title: 3D Printing Area Lead & Teacher
-draft: true
+draft: Flase
 org: Fat Cat Fab Lab
 start: "2025-07"
-end: 
+end: "Current"
 summary: Lead the 3D printing area at a community makerspace in NYC, maintain the lab's printers, and teach adults to use them safely.
 tags: [3d-printing, teaching, making, volunteering]
 ---
-<!-- Role, dates and duties from LinkedIn, October 2026. TODO(AJ): how often you teach, and what a class covers. -->
 
 ## The role
 
-I lead the 3D printing area at Fat Cat Fab Lab, a community makerspace in NYC, and maintain the lab's printers.
+I help lead the 3D printing area at Fat Cat Fab Lab, a community makerspace in NYC, with a few other lead. We help maintain the printers and ensure that they are in good shape for all makers to use.
 
 ## Teaching
 
