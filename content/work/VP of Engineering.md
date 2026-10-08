@@ -34,7 +34,7 @@ Revamped and documented the end-to-end operations workflow, driving scalability,
 
 Saw that people needed easy access to documented processes so everyone stayed aligned, and put an internal documentation wiki in place. I led a needs assessment, picked the product and rolled it out. It's now used daily across the company, so the team has consistent access to what we know.
 
-Kept growing the version control practice I started as a [[Lead Field Engineer]]: our programming team went from no version control, to 7 GitHub users, to 30+.
+Kept growing the version control practice I started as a [[Lead Field Engineer]]: our programming team went from no version control, to 7 GitHub users, to 26+.
 
 ### IT and the move to the cloud
 
