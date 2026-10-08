@@ -1,7 +1,7 @@
 ---
 title: Sushi Prophets
 slug: sushi-prophets
-draft: False
+draft: false
 status: idea
 started: 2025-03
 url: https://sushiprophets.com

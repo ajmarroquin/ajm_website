@@ -1,6 +1,6 @@
 ---
 title: "Onewheel"
-draft: False
+draft: false
 since: 
 summary: "Onewheel GOOOOD!"
 tags: [onewheel, nyc]

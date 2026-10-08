@@ -1,6 +1,6 @@
 ---
 title: Making
-draft: False
+draft: false
 since: 
 summary: Making things, mostly at Fat Cat Fab Lab.
 tags: [making, 3d-printing, nyc]

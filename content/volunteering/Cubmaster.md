@@ -1,6 +1,6 @@
 ---
 title: Cubmaster
-draft: False
+draft: false
 org: Scouting America, Greater New York Councils
 start: "2022-09"
 end: "Current"

@@ -1,0 +1,9 @@
+{
+  "types": {
+    "draft": "checkbox",
+    "consent": "checkbox",
+    "tags": "tags",
+    "outcomes": "multitext",
+    "links": "multitext"
+  }
+}

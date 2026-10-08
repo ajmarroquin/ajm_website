@@ -1,6 +1,6 @@
 ---
 title: "Camping"
-draft: False
+draft: false
 since: 
 summary: "I love camping with my family."
 tags: [camping, family]

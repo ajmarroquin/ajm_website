@@ -1,7 +1,7 @@
 ---
 title: Blackpug Activity Scraper
 slug: blackpug-activity-scraper
-draft: False
+draft: false
 status: shipped
 started: "2025-04"
 url: https://ajmarroquin.github.io/blackpug-activity-scraper/
